@@ -1,0 +1,8 @@
+<div class="w-3/4 mx-auto flex flex-col justify-center items-center mt-12">
+  <h1 class="text-2xl font-bold my-5 text-blue-500">USO DE PIPES</h1>
+  <div class="flex gap-4">
+    <label for="">Valor</label>
+    <input type="text" class="border" [(ngModel)]="resultado" />
+  </div>
+  <p *ngIf="resultado" class="my-6">Resultado : {{ resultado | uppercase }}</p>
+</div>
