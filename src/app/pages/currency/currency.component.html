@@ -15,5 +15,12 @@
     <option value="USD">USD</option>
     <option value="EUR">EUR</option>
   </select>
-  <p *ngIf="select" class="my-6">Resultado : {{ valor | currency : select }}</p>
+  <p *ngIf="select && valor; else elseMessage" class="my-6">
+    Resultado : {{ valor | currency : select }}
+  </p>
+  <ng-template #elseMessage>
+    <p class="text-red-500 mt-3">
+      Debe de ingresar una cantidad y Seleccionar una moneda
+    </p>
+  </ng-template>
 </div>
